@@ -62,6 +62,12 @@
 
 7. this정리//global, object인지// (3.this.js)
 
-
-
+8. export/require - node, Blocking
+   export/import - JavaScript, Non-Blocking(npm init --yes 제이슨객체 폴더 생성. "type=module", "main": "5.e_counter.js", 해당폴더 추가  )
+   (export가 나오면 블러킹으로 처리하려고 한다. 그부분을 해결하는 문법으로는)
   
+(
+  - 블러킹은 순차적
+  - 넌블러킹은 우선 던저놓고..
+  
+)
