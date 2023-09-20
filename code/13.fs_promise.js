@@ -11,13 +11,13 @@ fs.writeFile('./test.txt','hello~ javascript coders!!')
 .then(console.log('--write complete--'))
 .catch(console.error);
 */
-
+promise
 //test.txt 파일에 데이터 추가하기
-/* 
-fs.appendFile('./test.txt','hello~ javascript coders!! \r\n') //\r\n 줄바꿈
+
+fs.appendFile('./test.txt','hello~ javascript coders!! + os.EOL') //\r\n 줄바꿈
 .then(console.log('--append complete--'))
 .catch(console.error);
-*/
+
 
 //test.txt 파일을 복사하기
 /* 
@@ -27,6 +27,8 @@ fs.copyFile('./test.txt','./test-copy.txt')
 */
 
 //'sub-folder' 생성
+/* 
 fs.mkdir('sub-folder')
 .then(console.log)
 .catch(console.error)
+*/

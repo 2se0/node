@@ -73,3 +73,10 @@
   - 넌블러킹은 우선 던저놓고..
   
 )
+
+10. Node API
+  a) os - 운영체제 정보
+  b) Process
+  c) Path pro
+  d) FileSystem
+  e) Stream(Output/보내고) & Buffer - 임시저장 Non-Blocking(promise)(Input/받고 & Output/보내고) =>ex. 넷플릭스, 채팅서버 
