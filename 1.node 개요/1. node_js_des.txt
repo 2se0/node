@@ -71,7 +71,6 @@
 (
   - 블러킹은 순차적
   - 넌블러킹은 우선 던저놓고..
-  
 )
 
 10. Node API
@@ -135,7 +134,6 @@
               403(Forbidden) - 로그인한 사용자이지만 특정한 일을 수행할 권이 없는 경우 
               404(Not Found) - Url이 존재하지 않을 경우
               405(Method Not Allowed) - 요청한 기능이 허용되지 않을 경우
-
       
       5xx : Server error
       500 ~ : 500(Internal Server Error) - 서버에서 요청을 처리할 수 없는 경우
@@ -162,8 +160,12 @@
     OPTION - all supported methods for URL : 해당 URL에서 사용 가능한 모든 메소드 옵션을 알고 싶을때
     TRACE - echoes the received request : 요청에 대한 서버의 반응 상태를 확인할 때
 
-    [GET] - 200(get으로 요청 성공), 401, 403, 404, 405 ...
-    [POST] - 201, 401, 403, 404, 409 ...
+    [GET] - 200(get으로 요청 성공), 401, 403, 404, 405 ... //데이터가 url에 포함해서 넘어감
+      http://localhost:8080/courses?name=홍길동&age=20
+    [POST] - 201, 401, 403, 404, 409 ... //데이터가 body에 포함되어서 넘어감
+      http://localhost:8080/courses
+      body: name=홍길동&age=20
+      json = raw / form-data = html
     [PUT/DELETE/PATCH] - 200, 204, 404, 405 ...
     [HEAD/OPTION/TRACE] - 200, 401, 403, 404, 405 ...
 

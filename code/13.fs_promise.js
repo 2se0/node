@@ -26,9 +26,9 @@ fs.copyFile('./test.txt','./test-copy.txt')
 .catch(console.error)
 */
 
-//'sub-folder' 생성
+// 'sub-folder' 생성
 /* 
 fs.mkdir('sub-folder')
 .then(console.log)
 .catch(console.error)
-*/
+ */
