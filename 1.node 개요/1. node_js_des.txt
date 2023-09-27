@@ -160,7 +160,7 @@
     OPTION - all supported methods for URL : 해당 URL에서 사용 가능한 모든 메소드 옵션을 알고 싶을때
     TRACE - echoes the received request : 요청에 대한 서버의 반응 상태를 확인할 때
 
-    [GET] - 200(get으로 요청 성공), 401, 403, 404, 405 ... //데이터가 url에 포함해서 넘어감
+    [GET] - 200(get으로 요청 성공), 401, 403, 404, 405 ... //데이터가 url(헤더부분)에 포함해서 넘어감,쿼리방식(공백X),
       http://localhost:8080/courses?name=홍길동&age=20
     [POST] - 201, 401, 403, 404, 409 ... //데이터가 body에 포함되어서 넘어감
       http://localhost:8080/courses

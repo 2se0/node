@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- 제어문 출력 -->
+  <h1>scoreList~!</h1>
+  <table border="1">
+    <tr>
+      <td>번호</td>
+      <td>과목</td>
+      <td>등급</td>
+    </tr>
+    <% let index = 1;
+    scoreList.forEach(score =>{ %> <!-- 제어문 출력 -->
+      <tr>
+        <td><%= index++ %></td>
+        <td><%= score.name %></td>
+        <td><%= score.grade %></td>
+      </tr><!-- 데이터 출력 -->
+    <% }) %> 
+  </table>
+</body>
+</html>

@@ -9,7 +9,7 @@ let courses = [
   { name : 'Express'},
 ];
 
-//미들 체이닝
+//미들웨어 체이닝(시스템.. 수정이 용이)
 server.get('/', (req, res)=>{
   // console.log(req.headers); //headers를 줘야 node처럼 실행
   res.send('hello world~!');
