@@ -1,0 +1,18 @@
+ul{
+  display: flex;
+}
+
+li{
+  list-style: none;
+  width: 160px;
+  height: 48px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+}
+
+li:hover.on{
+  border: 1px solid #000;
+  background: rgba(0, 0, 0, .1);
+}

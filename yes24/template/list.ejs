@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="list.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="yesTab_nor">
+    <ul>
+      <li class="on" onclick="bestSellerCategory('BestSeller','1')"><span class="txt">종합</span></li>
+      <li class="on" onclick="bestSellerCategory('RealTimeBestSeller','1')"><span class="txt">실시간</span></li>
+      <li class="on" onclick="bestSellerCategory('DayBestSeller','1')"><span class="txt">일별</span></li>
+      <li class="on" onclick="bestSellerCategory('MonthWeekBestSeller','1')"><span class="txt">월별/주간</span></li>
+      <li class="on" onclick="bestSellerCategory('HotPriceBestSeller','1')"><span class="txt">특가</span></li>
+      <li class="on" onclick="bestSellerCategory('SteadySeller','1')"><span class="txt">스테디셀러</span></li>
+    </ul>
+  </div>
+  <div id="list"></div>
+
+  <script>
+    bestSellerCategory('bestSeller','1')
+    function bestSellerCategory(categoryName,page){
+      const url = '/'+categoryName+'/'+page;
+      //alert(url);
+      fetch(url)
+      .then(res => res.json())
+      .then((bestSellerList) => {
+        //alert(JSON.stringify(bestSellerList));
+        const output = `
+        <h2 class="title">${bestSellerList.title}</h2>
+        <hr>
+        ${bestSellerList.list.map(book => `
+          <div style="border-bottom: 1px solid #ccc;">
+          <h2>[도서]${book.bname}</h2>
+          <p><span>${book.author} 저</span>/<span>${book.translator} 역 |</span>
+            <span>${book.publisher}</span> | <span>${book.pdate}</span></p>
+          <p><h3>${book.price} 원</h3><span>(${book.dc}% 할인)</span></p>
+          </div>
+        `).join('\n')}`
+        document.querySelector("#list").innerHTML = output;
+      })
+      .catch(console.error)
+    }
+
+  </script>
+</body>
+</html>
