@@ -30,7 +30,6 @@ app.post('/login',(req,res)=>{
   // const ps = req.body.ps
   let result = 0;
   
-
   //list에서 id,ps 일치하면 -->1 일치하지 않으면 -->0
   for(let i=0; i<list.length; i++){
     let member = list[i];
@@ -57,6 +56,7 @@ app.post('/join',(req,res)=>{
   list.push({name,id,ps,address})
   console.log(list);
   res.redirect('/')
+
 })
 
 // 클라이언트가 호출하는게 아니라 내부에 있는 미들웨어가 호출

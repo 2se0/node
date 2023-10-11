@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h3><%= newsContent.title %></h3>
+    <div>
+      <img src="<%= newsContent.url %>" alt="">
+    </div>
+    <p><%= newsContent.content %></p>
+    <p style="text-align: right;">
+      <a href="/news"><button type="button">목록</button></a>
+      <hr>
+    </p>
+
+    <%- include('reply.ejs') %>
+
+    <script>
+      /* 두번 실행됨
+      const butRegReply = document.querySelector('#butRegReply');
+      butRegReply.addEventListener('click',(e) => {
+        const replyContent = document.querySelector('#replyContent').value
+        fetch('/reply',
+        {
+          method : "post",
+          headers : {'content-type':'application/json'},
+          body : JSON.stringify({nid:'<%= newsContent.nid %>', replyContent:replyContent})
+        })
+        .then((result)=>{
+          if(result.status === 201){
+            window.location.reload();
+          }
+        })
+        .catch(console.error)
+      }); 
+      폼을 사용할떈 무조건 벨리데이션 체크 */
+
+    </script>
+  <br><br><br><br><br>
+</body>
+</html>
